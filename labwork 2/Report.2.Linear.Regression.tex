@@ -111,6 +111,16 @@ Where $r$ is the learning rate.
 \subsection{Python Implementation}
 
 \begin{verbatim}
+def load_data(filename):
+    x_vals = []
+    y_vals = []
+    with open(filename, 'r') as file:
+        for line in file:
+            parts = line.strip().split(',')
+            x_vals.append(float(parts[0]))
+            y_vals.append(float(parts[1]))
+    return x_vals, y_vals
+    
 def compute_loss(x_vals, y_vals, w0, w1):
     N = len(x_vals)
     total = 0.0
