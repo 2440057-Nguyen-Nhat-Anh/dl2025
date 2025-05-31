@@ -1,0 +1,6 @@
+input_size=28
+conv_layers=1
+conv1_channels=1
+conv1_kernel=3
+pooling_size=2
+dense_units=10
